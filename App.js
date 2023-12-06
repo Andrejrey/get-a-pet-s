@@ -19,10 +19,10 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator>
         <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="AboutUs" component={AboutUs} />
-        <Drawer.Screen name="PetsForAdoption" component={PetsForAdoption} />
-        <Drawer.Screen name="MissingPets" component={MissingPets} />
-        <Drawer.Screen name="AnimalShelters" component={AnimalShelters} />
+        <Drawer.Screen name="About Us" component={AboutUs} />
+        <Drawer.Screen name="Pets For Adoption" component={PetsForAdoption} />
+        <Drawer.Screen name="Missing Pets" component={MissingPets} />
+        <Drawer.Screen name="Animal Shelters" component={AnimalShelters} />
         <Drawer.Screen name="Vet" component={Vet} />
         <Drawer.Screen name="Donatios" component={Donatios} />
         <Drawer.Screen name="Contact" component={Contact} />
