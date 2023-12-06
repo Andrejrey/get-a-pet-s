@@ -13,7 +13,7 @@ const PetsForAdoption = () => {
             />
           </View>
           <View style={styles.adopted}>
-            <Text style={styles.adoptnumber}>Haustiere Adoptiert: 56</Text>
+            <Text style={styles.adoptnumber}>Pets Adopted: 56</Text>
           </View>
           <View>
             <Text style={styles.animals}>Hunde</Text>
