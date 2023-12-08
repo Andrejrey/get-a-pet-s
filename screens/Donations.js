@@ -17,6 +17,8 @@ const Donatios = () => {
   );
 };
 
+export default Donatios;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -51,5 +53,3 @@ const styles = StyleSheet.create({
     borderColor: "#fe9a5e",
   },
 });
-
-export default Donatios;
