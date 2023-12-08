@@ -6,24 +6,24 @@ import { useState } from "react";
 
 const DogCards = () => {
   const navigation = useNavigation();
-  const [animalData, setAnimalData] = useState();
+  // const [animalData, setAnimalData] = useState();
 
-  const searchDogApi = async () => {
-    try {
-      const response = await axiosInstance.get("/breeds", {
-        params: {
-          limit: 20,
-        },
-      });
-      setAnimalData(response.data);
-    } catch (err) {
-      setErrorMessage("Something went wrong");
-    }
-  };
+  // const searchDogApi = async () => {
+  //   try {
+  //     const response = await axiosInstance.get("/breeds", {
+  //       params: {
+  //         limit: 20,
+  //       },
+  //     });
+  //     setAnimalData(response.data);
+  //   } catch (err) {
+  //     setErrorMessage("Something went wrong");
+  //   }
+  // };
 
-  useEffect(() => {
-    searchDogApi();
-  }, []);
+  // useEffect(() => {
+  //   searchDogApi();
+  // }, []);
 
   // const dogData = animalData.animalResults;
 

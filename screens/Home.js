@@ -1,5 +1,6 @@
 import { StyleSheet, View, Text, Image } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import NewsCards from "../components/NewsCards";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
         <View style={styles.app}>
           <Text style={styles.appName}>Get A Pet</Text>
         </View>
-        {/* <NewsCards /> */}
+        <NewsCards />
       </View>
     </ScrollView>
   );

@@ -37,3 +37,4 @@ yarn-error.*
 # Custom
 assets/illustrations
 assets/images
+api
