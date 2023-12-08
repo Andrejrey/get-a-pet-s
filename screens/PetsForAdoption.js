@@ -1,5 +1,7 @@
 import { StyleSheet, View, Image, Text } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import CatCards from "../components/CatCards";
+import OtherAnimalCards from "../components/OtherAnimalCards";
 
 const PetsForAdoption = () => {
   return (
@@ -16,22 +18,24 @@ const PetsForAdoption = () => {
             <Text style={styles.adoptnumber}>Pets Adopted: 56</Text>
           </View>
           <View>
-            <Text style={styles.animals}>Hunde</Text>
+            <Text style={styles.animals}>Dogs</Text>
           </View>
-          {/* <DogCards data={animalResults} /> */}
+          {/* <DogCards /> */}
           <View>
-            <Text style={styles.animals}>Katzen</Text>
+            <Text style={styles.animals}>Cats</Text>
           </View>
-          {/* <CatCards /> */}
+          <CatCards />
           <View>
-            <Text style={styles.animals}>Andere</Text>
+            <Text style={styles.animals}>Other</Text>
           </View>
-          {/* <OtherCards /> */}
+          <OtherAnimalCards />
         </View>
       </View>
     </ScrollView>
   );
 };
+
+export default PetsForAdoption;
 
 const styles = StyleSheet.create({
   container: {
@@ -73,5 +77,3 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
 });
-
-export default PetsForAdoption;

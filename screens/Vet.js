@@ -109,6 +109,8 @@ const Vet = () => {
   );
 };
 
+export default Vet;
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
@@ -163,5 +165,3 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
 });
-
-export default Vet;
