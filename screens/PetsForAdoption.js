@@ -1,6 +1,7 @@
 import { StyleSheet, View, Image, Text } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import CatCards from "../components/CatCards";
+import DogCards from "../components/DogCards";
 import OtherAnimalCards from "../components/OtherAnimalCards";
 
 const PetsForAdoption = () => {
@@ -20,7 +21,7 @@ const PetsForAdoption = () => {
           <View>
             <Text style={styles.animals}>Dogs</Text>
           </View>
-          {/* <DogCards /> */}
+          <DogCards />
           <View>
             <Text style={styles.animals}>Cats</Text>
           </View>

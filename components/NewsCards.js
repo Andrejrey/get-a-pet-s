@@ -7,7 +7,7 @@ const NewsCards = (props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => navigation.navigate("News")}
+        onPress={() => navigation.navigate("NewsDetails")}
         style={styles.card}
       >
         <Image
@@ -21,7 +21,7 @@ const NewsCards = (props) => {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate("News")}
+        onPress={() => navigation.navigate("NewsDetails")}
         style={styles.card}
       >
         <Image
@@ -33,7 +33,7 @@ const NewsCards = (props) => {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate("News")}
+        onPress={() => navigation.navigate("NewsDetails")}
         style={styles.card}
       >
         <Image

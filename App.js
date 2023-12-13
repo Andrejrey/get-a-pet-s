@@ -20,6 +20,7 @@ import MissingPets from "./screens/MissingPets";
 import PetsForAdoption from "./screens/PetsForAdoption";
 import Vet from "./screens/Vet";
 import CustomDrawer from "./components/CustomDrawer";
+import NewsDetails from "./screens/NewsDetails";
 
 const Drawer = createDrawerNavigator();
 
@@ -113,6 +114,13 @@ export default function App() {
             drawerIcon: ({ color }) => (
               <Feather name="smartphone" size={22} color={color} />
             ),
+          }}
+        />
+        <Drawer.Screen
+          name="NewsDetails"
+          component={NewsDetails}
+          options={{
+            drawerLabel: () => null,
           }}
         />
       </Drawer.Navigator>

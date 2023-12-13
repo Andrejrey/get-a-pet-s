@@ -1,61 +1,62 @@
-import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, Image, StyleSheet } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
-import axiosInstance from "../api/axiosInstansdogApi";
-import { useState } from "react";
 
-const DogCards = () => {
+const CatCards = () => {
   const navigation = useNavigation();
-  // const [animalData, setAnimalData] = useState();
-
-  // const searchDogApi = async () => {
-  //   try {
-  //     const response = await axiosInstance.get("/breeds", {
-  //       params: {
-  //         limit: 20,
-  //       },
-  //     });
-  //     setAnimalData(response.data);
-  //   } catch (err) {
-  //     setErrorMessage("Something went wrong");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   searchDogApi();
-  // }, []);
-
-  // const dogData = animalData.animalResults;
-
   return (
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       style={styles.horiScroll}
     >
-      {animalData.map((dogs, index) => {
-        const dogIndex = index;
-        return (
-          <TouchableOpacity
-            key={index}
-            onPress={() =>
-              navigation.navigate("Details", { dogData, dogIndex: dogIndex })
-            }
-            style={styles.card}
-          >
-            <Image source={{ uri: dogs.image.url }} style={styles.image} />
-            <View style={styles.detail}>
-              <Text style={styles.name}>{dogs.name}</Text>
-              <Text style={styles.lifeSpan}>{dogs.life_span}</Text>
-            </View>
-          </TouchableOpacity>
-        );
-      })}
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Details")}
+        style={styles.card}
+      >
+        <Image
+          source={require("../assets/images/dogs/dog1.jpg")}
+          style={styles.image}
+        />
+        <View style={styles.detail}>
+          <Text style={styles.name}>Rocky</Text>
+          <Text style={styles.age}>2 monate</Text>
+        </View>
+        <Text style={styles.city}>München</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Details")}
+        style={styles.card}
+      >
+        <Image
+          source={require("../assets/images/dogs/dog2.jpg")}
+          style={styles.image}
+        />
+        <View style={styles.detail}>
+          <Text style={styles.name}>Flora</Text>
+          <Text style={styles.age}>3 monate</Text>
+        </View>
+        <Text style={styles.city}>Dresden</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Details")}
+        style={styles.card}
+      >
+        <Image
+          source={require("../assets/images/dogs/dog3.jpg")}
+          style={styles.image}
+        />
+        <View style={styles.detail}>
+          <Text style={styles.name}>Jecky</Text>
+          <Text style={styles.age}>7 monate</Text>
+        </View>
+        <Text style={styles.city}>Neuwied</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };
 
-export default DogCards;
+export default CatCards;
 
 const styles = StyleSheet.create({
   image: {
@@ -81,6 +82,8 @@ const styles = StyleSheet.create({
   },
 
   detail: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     paddingTop: 10,
     paddingHorizontal: 10,
   },
@@ -89,13 +92,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#656566",
   },
+
   age: {
     fontWeight: "bold",
     color: "#fe9a5e",
-    paddingLeft: 35,
   },
 
-  lifeSpan: {
+  city: {
+    paddingHorizontal: 10,
     fontWeight: "bold",
     paddingTop: 3,
     color: "#fe9a5e",
